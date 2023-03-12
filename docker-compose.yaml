@@ -1,13 +1,12 @@
 services:
   db:
-    image: mysql
-    command: --default-authentication-plugin=mysql_native_password
+    image: postgres
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD:
-      MYSQL_DATABASE: laundry
+      POSTGRES_PASSWORD: Schwarzenegger
+      POSTGRES_DB: laundry
     ports:
-      - "3306:3306"
+      - "5432:5432"
     profiles:
       - infrastructure
 

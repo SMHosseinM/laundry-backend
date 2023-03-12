@@ -1,0 +1,50 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Mohammad Hossein
+      changes:
+        - createTable:
+            tableName: user
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  defaultValueComputed: gen_random_uuid()
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: varchar(128)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(128)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: phone_number
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: postcode
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: address
+                  type: varchar(128)
+                  constraints:
+                    nullable: false
+
+
+
+
+

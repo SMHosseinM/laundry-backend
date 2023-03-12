@@ -1,4 +1,4 @@
 databaseChangeLog:
   - include:
-      file: migrations/test.yaml
+      file: migrations/user.yaml
       relativeToChangelogFile: true
